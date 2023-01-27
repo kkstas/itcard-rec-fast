@@ -1,12 +1,9 @@
 const express = require("express");
 const router = require("./routes");
-const path = require("path");
-const fs = require("fs");
 
 const PORT = process.nextTick.PORT || 8080;
 
 const app = express();
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(router);
 
